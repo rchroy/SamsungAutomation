@@ -1,4 +1,4 @@
-# SamsungPhoneTest
+# SamsungAutomationTest
 A page object model framework using python and selenium to extract data from the Samsung website.
 # Prerequisites for running the project
 Must have Python3.9 installed
