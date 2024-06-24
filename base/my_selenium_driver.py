@@ -76,8 +76,30 @@ class SeleniumDriver():
             print_stack()
             text = None
         return text
-    
+
+    def sendEmail(self, locator="", locatorType = "xpath", element=None, info=""):
+
+        try:
+            if locator:
+                element = self.getElement(locator, locatorType)
+            text = element.send_keys("XX@gmail.com")
+        except:
+            self.log.error("Failed to Send Keys on element " + info)
+            print_stack()
+            text = None
+        return text
    
+    def sendPassword(self, locator="", locatorType = "xpath", element=None, info=""):
+
+        try:
+            if locator:
+                element = self.getElement(locator, locatorType)
+            text = element.send_keys("XXXXXX")
+        except:
+            self.log.error("Failed to Send Keys on element " + info)
+            print_stack()
+            text = None
+        return text
         
 
     def isElementPresent(self, locator="", locatorType = "xpath", element=None):
